@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "inkstone/receipt.v1",
+  "type": "object",
+  "required": ["schemaVersion", "revision", "projectHash", "sourceHashes", "toolchain", "output", "ffprobe", "stale"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "revision": {"type": "integer", "minimum": 0},
+    "projectHash": {"type": "string"},
+    "sourceHashes": {"type": "array", "items": {"type": "string"}},
+    "toolchain": {"type": "object"},
+    "output": {"type": "object"},
+    "ffprobe": {"type": "object"},
+    "stale": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

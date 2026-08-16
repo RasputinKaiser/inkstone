@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "fixture-project",
+  "title": "Synthetic proof cut",
+  "frameRate": { "numerator": 24, "denominator": 1 },
+  "dimensions": { "width": 320, "height": 180 },
+  "sampleRate": 48000,
+  "durationMs": 2000,
+  "assets": [],
+  "tracks": {
+    "video": { "id": "track-video-primary", "type": "video", "clips": [] },
+    "audio": { "id": "track-audio-primary", "type": "audio", "clips": [] }
+  },
+  "textOverlays": [],
+  "captionOverlays": [],
+  "revision": 0,
+  "commandHistory": []
+}

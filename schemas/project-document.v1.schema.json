@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "inkstone/project-document.v1",
+  "type": "object",
+  "required": ["schemaVersion", "id", "title", "frameRate", "dimensions", "sampleRate", "durationMs", "assets", "tracks", "textOverlays", "captionOverlays", "revision", "commandHistory"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "frameRate": {"type": "object", "required": ["numerator", "denominator"], "properties": {"numerator": {"type": "integer", "minimum": 1}, "denominator": {"type": "integer", "minimum": 1}}, "additionalProperties": false},
+    "dimensions": {"type": "object", "required": ["width", "height"], "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}}, "additionalProperties": false},
+    "sampleRate": {"type": "integer", "minimum": 1},
+    "durationMs": {"type": "integer", "minimum": 0},
+    "assets": {"type": "array", "items": {"type": "object", "required": ["id", "kind", "name"], "properties": {"id": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "kind": {"enum": ["video", "audio", "image", "unknown"]}, "name": {"type": "string"}, "sizeBytes": {"type": "integer", "minimum": 0}, "durationMs": {"type": "number", "minimum": 0}, "contentType": {"type": "string"}, "metadata": {"type": "object"}}, "additionalProperties": false}},
+    "tracks": {"type": "object", "required": ["video", "audio"]},
+    "textOverlays": {"type": "array"},
+    "captionOverlays": {"type": "array"},
+    "revision": {"type": "integer", "minimum": 0},
+    "commandHistory": {"type": "array"}
+  },
+  "additionalProperties": false
+}

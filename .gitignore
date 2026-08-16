@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.inkstone/
+exports/
+*.receipt.json
+inkstone-render.mp4
+inkstone-render.mp4.receipt.json
+inkstone-export.mp4
+inkstone-export.mp4.receipt.json
+*.snapshot.json

@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "description": "Synthetic-only fixture recipes; media is generated in a temporary directory.",
+  "video": { "source": "lavfi color=c=0x1f4036:s=320x180:r=24", "durationSeconds": 2, "codec": "libx264" },
+  "audio": { "source": "lavfi sine=frequency=660:sample_rate=48000", "durationSeconds": 2, "codec": "pcm_s16le" }
+}

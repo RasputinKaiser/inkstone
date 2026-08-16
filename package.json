@@ -1,0 +1,24 @@
+{
+  "name": "inkstone",
+  "version": "0.1.0",
+  "description": "A local-first, deterministic browser video editor and command-line renderer.",
+  "license": "MIT",
+  "bin": {
+    "inkstone": "dist/src/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-web.mjs",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "verify:fixture": "npm run build && node dist/src/fixtures.js",
+    "start": "node dist/src/service.js",
+    "dev": "npm run build && node dist/src/service.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

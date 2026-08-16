@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "caption-demo-01",
+  "type": "set_caption",
+  "payload": {
+    "id": "caption-intro",
+    "startMs": 0,
+    "endMs": 1200,
+    "text": "A deterministic cut, made locally.",
+    "language": "en"
+  }
+}

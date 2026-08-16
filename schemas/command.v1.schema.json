@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "inkstone/command.v1",
+  "type": "object",
+  "required": ["schemaVersion", "id", "type", "payload"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "id": {"type": "string"},
+    "type": {"enum": ["import_asset", "insert_clip", "trim_clip", "split_clip", "move_clip", "set_transition", "set_text", "set_caption", "set_gain", "delete_clip", "replace_clip", "undo", "redo"]},
+    "payload": {"type": "object"},
+    "expectedRevision": {"type": "integer", "minimum": 0}
+  },
+  "additionalProperties": false
+}
